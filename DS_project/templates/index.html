@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Performance Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<h1>Student Performance Prediction</h1>
+
+<form action="/predict" method="post">
+
+<label>Gender</label><br>
+<select name="gender">
+    <option>male</option>
+    <option>female</option>
+</select><br><br>
+
+<label>Race/Ethnicity</label><br>
+<select name="race">
+    <option>group A</option>
+    <option>group B</option>
+    <option>group C</option>
+    <option>group D</option>
+    <option>group E</option>
+</select><br><br>
+
+<label>Parent Education</label><br>
+<select name="parent">
+    <option>some high school</option>
+    <option>high school</option>
+    <option>some college</option>
+    <option>associate's degree</option>
+    <option>bachelor's degree</option>
+    <option>master's degree</option>
+</select><br><br>
+
+<label>Lunch</label><br>
+<select name="lunch">
+    <option>standard</option>
+    <option>free/reduced</option>
+</select><br><br>
+
+<label>Test Preparation</label><br>
+<select name="preparation">
+    <option>none</option>
+    <option>completed</option>
+</select><br><br>
+
+<label>Reading Score</label><br>
+<input type="number" name="reading" required><br><br>
+
+<label>Writing Score</label><br>
+<input type="number" name="writing" required><br><br>
+
+<input type="submit" value="Predict">
+
+</form>
+
+</body>
+</html>
